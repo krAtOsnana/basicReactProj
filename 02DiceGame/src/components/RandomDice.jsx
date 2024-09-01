@@ -10,7 +10,7 @@ function RandomDice({
     const [isClicked, setIsClicked] = useState(false);
     
     const handelClick = ()=>{
-      isClicked((prev)=>{!prev})
+      setIsClicked((prev)=>!prev)
     }
     
     
@@ -25,8 +25,8 @@ function RandomDice({
        onClick={generateRnadomNum} />  
       </div>
       
-       <div>
-          <h1 className='uppercase text-center mt-5 text-2xl font-semibold w-[250px] '>click on dice to roll</h1>
+       <div className='flex justify-center'>
+          <h1 className='uppercase text-center  mt-5 text-2xl font-semibold w-[250px] '>click on dice to roll</h1>
        </div>
 
       <div className='flex flex-col items-center gap-5 mt-4'>
@@ -39,17 +39,19 @@ function RandomDice({
         >reset</button>      
         
       <button 
-      className='uppercase 0
+      className={`uppercase 0
       bg-black text-white text-center w-[220px]  
       hover:bg-white hover:text-black hover:border-black border-2 border-black
-      ease-in duration-200  p-2 px-5 rounded-md  gap-y-[2]'
+      ease-in duration-200  p-2 px-5 rounded-md  gap-y-[2]
+      ${isClicked ? 'bg-white text-black' : ""}
+      `}
+      
       onClick={handelClick}
       >rules" </button>  
 
-      <div className=' bg-red-400 p-4 '>
-        <h1 className={`font-semibold underline underline-offset-4 
-         ${isClicked ? '' : "hidden"}
-         ` } >How to play dice game : </h1>
+      <div className={`bg-red-400 p-4  
+      ${isClicked ? '' : "hidden"}`} >
+        <h1 className={`font-semibold underline underline-offset-4`} >How to play dice game : </h1>
         <div>
           <ul>
             <li>Select any number</li>

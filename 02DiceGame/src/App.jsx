@@ -4,7 +4,7 @@ import LandingPage from "./components/LandingPage"
 
 function App() {
 
-  const[isStartes ,setIsStarted] = useState(true)
+  const[isStartes ,setIsStarted] = useState(false)
 
   const clickHandeler = () => {
             setIsStarted((prev) => !prev)
