@@ -43,7 +43,7 @@ function RandomDice({
       bg-black text-white text-center w-[220px]  
       hover:bg-white hover:text-black hover:border-black border-2 border-black
       ease-in duration-200  p-2 px-5 rounded-md  gap-y-[2]
-      ${isClicked ? 'bg-white text-black' : ""}
+      ${isClicked ? 'bg-white text-black ' : "text-black"}
       `}
       
       onClick={handelClick}
