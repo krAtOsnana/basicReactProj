@@ -24,6 +24,7 @@ const styles = {
     width: '200px',
     textAlign: 'center',
     boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+    backgroundColor:'#696969',
   },
   image: {
     width: '100px',
